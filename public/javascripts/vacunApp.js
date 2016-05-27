@@ -5,15 +5,15 @@ app.config(['$routeProvider', function($routeProvider){
 	$routeProvider
 		.when('/inicio', {
 			templateUrl : 'partials/inicio.html',
-			controller : 'CentroCtrl'
+			controller : 'InicioCtrl'
 		})
-		.when('/centros/', {
+		.when('/centros/:depto', {
 			templateUrl : 'partials/centros.html',
-			controller : 'CentroCtrl'
+			controller : 'CentrosCtrl'
 		})
-		.when('/centro/:id', {
+		.when('/verCentro/:id', {
 			templateUrl : 'partials/verCentro.html',
-			controller : 'CentroCtrl'
+			controller : 'VerCentroCtrl'
 		})
 		.otherwise({
 			redirectTo : '/inicio'

@@ -1,0 +1,31 @@
+<div id="main-content">
+	<div class="container">
+
+		<div class="row">
+ 			<div class="col-lg-10 col-lg-offset-1 ">
+				<div class="title h1">Centros en {{deptoSelect}}</div>
+			</div>
+
+			<table class="table table-striped">
+				<thead>
+				  	<th>Localidad</th>
+				  	<th>Nombre</th>
+				  	<th>Horario</th>
+			    </thead>
+			    <tbody>
+			    	<tr dir-paginate="c in centros|itemsPerPage:10">
+			    		<td>{{c.localidad}}</td>
+			    		<td>{{c.nombre}}</td>
+			    		<td>{{c.horario}}</td>
+			    		<td>
+					        <a class="btn btn-default btn-xs" href="#/verCentro/{{c._id}}">
+					          <span class="fa fa-eye" aria-hidden="true"></span>
+					        </a>
+        				</td>
+			    	</tr>
+			    </tbody>
+			</table>
+
+		</div>
+	</div>
+</div>

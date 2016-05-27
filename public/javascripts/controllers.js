@@ -1,20 +1,28 @@
-app.controller('CentroCtrl', ['$scope', '$resource',
+app.controller('InicioCtrl', ['$scope', '$resource',
 	function($scope, $resource){
 		$scope.deptoSelect = "Montevideo";
 		$scope.deptos = ["Montevideo", "Canelones", "Paris"];
 
-		Centros.query(function(cents){
+	}]);
+
+app.controller('CentrosCtrl', ['$scope', '$resource', '$routeParams',
+	function($scope, $resource, $routeParams){
+
+		var Centros = $resource('/api/centros/depto/:depto');
+		Centros.query({ depto : $routeParams.depto }, function(cents){
 			$scope.centros = cents;
 		});
 
-		$scope.listar = function(){
-			alert('Capo de la vida');
-		}
 
-		$scope.verCentro = function(){
+	}]);
 
-			$scope.centroSelect = "";
-		}
+app.controller('VerCentroCtrl', ['$scope', '$resource', '$routeParams',
+	function($scope, $resource, $routeParams){
+
+		var Centros = $resource('/api/centros/:id');
+		Centros.query({ depto : $routeParams.id }, function(cent){
+			$scope.centro = cent;
+		});
 
 
 	}]);
