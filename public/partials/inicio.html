@@ -1,14 +1,28 @@
-<div id="main-content">
-	<div class="container">
+<div class="middlePage">
+	<div class="page-header">
+	  <h1 class="logo">¿Donde vacunarse?</h1>
+	</div>
 
-	<div class="row">
-		<select  ng-model="deptoSelect">
-	    	<option ng-repeat="d in deptos">{{d}}</option>
-	  	</select>
+	<div class="panel panel-info">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Buscar centros de vacunación</h3>
+	  </div>
+	  <div class="panel-body">
+	  	<div class="row">
+		   <div class="col-md-12" style="border-left:1px solid #ccc;">
+			<form class="form-horizontal">
+				<fieldset>
+		  			<select ng-model="deptoSelect" class="form-control custom">
+				    		<option ng-repeat="d in deptos">{{d}}</option>
+				  	</select>
+		  			<div class="spacing"></div>
+					<a type="button" class="btn btn-info btn-md btn-block" ng-click="listar()" href="#/centros/{{deptoSelect}}">VER</a>
+				</fieldset>
+			</form>
+		   </div>
+	    	</div>
+	  </div>
+	</div>
+</div>
 
-	  	<a type="button" class="btn btn-default" ng-click="listar()" 
-	  		aria-label="Left Align" href="#/centros/{{deptoSelect}}">Ver
-		  </a>
-  	</div>
-</div>
-</div>
+

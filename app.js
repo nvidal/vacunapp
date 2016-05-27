@@ -15,7 +15,7 @@ var app = express();
 mongoose = require('mongoose'),
 fs = require('fs');
 
-var mongoUri = 'mongodb://localhost:27017/vacunapp';
+var mongoUri = 'mongodb://vacu:vacu@ds017553.mlab.com:17553/heroku_2d72vjgx';
 mongoose.connect(mongoUri);
 var db = mongoose.connection;
 db.on('error', function (err) {
