@@ -36,7 +36,7 @@ p {
 
 select {
   margin: 5px;
-  width: 100% !important;
+  width: 200px !important;
 }
 
 select.custom {

@@ -1,0 +1,21 @@
+doctype html
+html(ng-app='VacunApp', lang="es")
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/angular/angular.js')
+    script(src='/javascripts/angular/angular-resource.js')
+    script(src='/javascripts/angular/angular-route.js')
+    script(src='/javascripts/angularUI/dirPagination.js')
+    script(src='/javascripts/bootstrap/js/jquery-1.12.1.min.js')
+    script(src='/javascripts/bootstrap/js/bootstrap.min.js')
+    script(src='/javascripts/bootstrap/js/bootstrap-select.min.js')
+    link(rel='stylesheet', href='/javascripts/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/javascripts/bootstrap/css/bootstrap-select.min.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    script(src='/javascripts/vacunApp.js')
+    script(src='/javascripts/controllers.js')
+  body
+    block content

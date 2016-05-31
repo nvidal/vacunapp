@@ -9,7 +9,7 @@
 	  </div>
 	  <div class="panel-body">
 	  	<div class="row">
-		   <div class="col-md-12" style="border-left:1px solid #ccc;">
+		   <div class="col-md-12" style="border-left:1px solid #ccc;height:160px">
 			<form class="form-horizontal">
 				<fieldset>
 		  			<select ng-model="deptoSelect" class="form-control custom">
